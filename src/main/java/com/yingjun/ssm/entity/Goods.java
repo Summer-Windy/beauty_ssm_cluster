@@ -3,15 +3,17 @@ package com.yingjun.ssm.entity;
 import java.util.Date;
 
 import javax.validation.constraints.Min;
+import javax.validation.groups.Default;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.yingjun.ssm.util.CustomDateSerializer;
 import com.yingjun.ssm.validator.Not999;
+import com.yingjun.ssm.validator.groups.CommEdit;
 
 public class Goods {
 
-	@Min(900)
+	@Min(value = 900,groups = {Default.class,CommEdit.class})
 	@Not999 //这个为自定义的验证标签
 	private long goodsId;
 	
