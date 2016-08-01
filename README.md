@@ -16,3 +16,11 @@
 
 ###**架构图：**
 ![](http://i.imgur.com/Xtpg3od.png)
+
+###**Start:**
+- 创建数据库ssm 执行resources->sql-schema.sql文件  将数据库信息配置到jdbc.properties
+- 修改redis.properties  自己环境的redis配置信息 (可以注释账号密码)
+
+###**TODO**
+- Active MQ
+-
